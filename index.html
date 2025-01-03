@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+ 
+</head>
+
+<body>
+  <!-- Project -->
+  <main class="container">
+     <header>
+       <h1>Timer</h1>
+     </header>
+     <div class="timer-input">
+        <select id="hrs">
+          <optgroup class="dropdown-hrs" onchange="updateSelection()">
+          </optgroup>
+        </select>
+        <select id="mins">
+           <optgroup class="dropdown-mins">
+           </optgroup>
+        </select>
+        <select id="sec">
+           <optgroup class="dropdown-sec">
+           </optgroup>
+         </select>
+     </div>
+     <div class="exec" id="exec">
+       <button id="btn-det" onclick="createNewButton()">+</button>
+     </div>
+     
+     <div class="pop" id="timerPopup"> 
+        <button onclick="showField()">
+          <span>Timer name</span>
+          <span class="insertNameField">work ></span>
+        </button>
+        <button onclick="closePopup()">F</button>
+     </div>
+    
+     <section id="timerPopup2" class="namePopup">
+        <label>Timer name</label>
+        <br>
+        <input type="text" id="nameField">
+        <section class="name-action-btn">
+          <button>Cancel</button>
+          <button onclick="finishField()">Done</button>
+        </section>
+     </section>
+     
+     <section class="showTimerCount">
+        <div>
+           <span class="material-symbols-outlined">timer</span>
+           <span id="display">00:00:00</span>
+        </div>
+        
+        <span id="currentDate"></span>
+     </section>
+     <span class="timerInfo"></span>
+     
+     <section class="controls">
+        <button id="resetTimerBtn" onclick="resetTimer()">
+          <span class="material-symbols-outlined">restart_alt</span>
+        </button>
+        <button onclick="startTimer()" id="startTimer">
+               <span class="material-symbols-outlined">play_arrow</span>
+        </button>
+        <button>
+          <div class="infos" id="infos"></div>
+          <span class="material-symbols-outlined"> notifications_active</span>
+        </button>
+     </section>
+     
+     <section class="audios">
+        <audio src="/audios/mixkit-children-happy-countdown-923.wav" id="audio1" loop="loop"></audio>
+        <audio src="/audios/clock-ticking_C_major.wav" id="tick" loop="loop"></audio>
+     </section>
+    
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 1rem;
+}
+select {
+  width: 100%;
+  min-height: 60px;
+  text-align: center;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  height: auto;
+  font-family: 'Kanit';
+  margin-top: 1rem;
+}
+.timer-input {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+}
+.showTimerCount {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kanit';
+  font-size: 2.5rem;
+}
+.showTimerCount span {
+  font-size: 1.5rem;
+}
+.showTimerCount div {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.showTimerCount div span {
+  font-size: 2.5rem;
+}
+h1 {
+  font-family: 'Nunito';
+}
+button, input {
+  font-family: 'Nunito';
+}
+.exec {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-auto-rows: minmax(60px,auto);
+  grid-gap: 0.4em;
+  margin-top: 1.2rem;
+  justify-content: center;
+}
+.exec button {
+  font-size: 3rem;
+}
+.container .pop {
+  display: none;
+  width: 100%;
+  margin: 2rem auto;
+  
+}
+.pop button {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 4rem;
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+.pop button span:nth-child(2n) {
+  font-size: 1rem;
+  color: darkgray;
+}
+.pop button:first-child {
+  border-bottom: 1px solid darkgray;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.pop button:last-child {
+  width: 50px;
+  border-bottom: 1px solid darkgray;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: 0.5rem;
+}
+.namePopup {
+  width: 100%;
+  background: whitesmoke;
+  margin: 1rem 0 ;
+  display: none;
+  z-index: 500;
+}
+.namePopup label {
+  padding-top: 2rem;
+  padding-left: 1rem;
+  width: 100%;
+  display: block;
+}
+.namePopup input[type="text"] {
+  width: 90%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  display: block;
+  background: transparent;
+  margin: 1rem auto;
+}
+.namePopup .name-action-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.namePopup .name-action-btn button {
+  height: 2.5rem;
+  padding: 0 2rem;
+  align-content: center;
+  vertical-align: center;
+  margin: 1rem 0;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 80%;
+  left: 0;
+  right: 0;
+  
+}
+.controls button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.controls button:nth-child(2) {
+  width: 60px;
+  height:60px;
+  border-radius: 50%;
+}
+.infos {
+  background: black;
+  color: white;
+  border: 2px solid black;
+  position: absolute;
+  transform: translateY(-100%);
+  width: 100px;
+  border: none;
+  
+}
+.timerInfo {
+  font-family: fantasy;
+  font-weight: bold;
+  color: darkgray;
+  font-size: 1.2rem;
+  position: absolute;
+  transition: all 0.8s;
+}
+.imgTimer {
+  width: 50%;
+  min-width: 10px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
